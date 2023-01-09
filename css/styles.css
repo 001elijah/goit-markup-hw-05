@@ -345,7 +345,22 @@ nav a {
 }
 
 .page-nav a.current {
+    position: relative;
     color: var(--accent-color);
+}
+
+.current::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    height: 4px;
+    width: 100%;
+
+    background: #2196F3;
+    border-radius: 2px;
 }
 
 .icon-envelope {
