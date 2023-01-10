@@ -76,7 +76,7 @@
                 <div class="container">
                     <!-- if u c that a part of a string begins from a new string simply use "br" -->
                     <h1 class="hero-title">Ефективні рішення для <br /> вашого бізнесу</h1>
-                    <button type="button" class="hero-button">Замовити послугу</button>
+                    <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
                 </div>
             </div>
         </section>
@@ -429,5 +429,15 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button data-modal-close>
+                <svg width="11px" height="11px">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
