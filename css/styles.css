@@ -28,7 +28,7 @@ h5,
 h6 {
     margin: 0;
 }
-/* common page style */
+/*--------------------COMMON PAGE STYLE--------------------*/
 .page {
     margin: 0;
     background-color: #FFFFFF;
@@ -58,6 +58,10 @@ html {
     border-bottom: 1px solid #ececec;
 }
 
+.page-header.after {
+    border-bottom: 0px;
+}
+
 .header-flex {
     display: flex;
     align-items: center;
@@ -74,7 +78,7 @@ nav a {
     display: block;
 }
 
-/* logo style */
+/*--------------------LOGO STYLE--------------------*/
 .logo-1-3 {
     color: var(--accent-color);
 }
@@ -104,7 +108,7 @@ nav a {
     letter-spacing: 0.03em;
 }
 
-/* remove dots from list and settings reset */
+/*--------------------REMOVE DOTS FROM LIST AND SETTINGS RESET--------------------*/
 .list {
     list-style: none;
     margin-top: 0;
@@ -112,7 +116,7 @@ nav a {
     padding-left: 0;
 }
 
-/* pros section */
+/*--------------------PROS SECTION--------------------*/
 
 .section.pros {
     padding-bottom: 0;
@@ -150,7 +154,7 @@ nav a {
     height: 70px;
 }
 
-/* what we do section */
+/*--------------------WHAT WE DO SECTION--------------------*/
 
 .activity-list {
     display: flex;
@@ -190,7 +194,7 @@ nav a {
     color: var(--white-text-color);
 }
 
-/* our team section */
+/*--------------------OUR TEAM--------------------*/
 
 .team-list {
     display: flex;
@@ -246,7 +250,9 @@ nav a {
     height: 44px;
     width: 44px;
 
-    transition: 250ms var(--cubic-bezier);
+    transition: background-color 250ms var(--cubic-bezier),
+                color 250ms var(--cubic-bezier);
+
 }
 
 .icon {
@@ -260,7 +266,7 @@ nav a {
 }
 
 
-/* portfolio page filter */
+/*--------------------PORTFOLIO FILTER--------------------*/
 
 .filter-list {
     display: flex;
@@ -272,7 +278,7 @@ nav a {
     margin-right: 8px;
 }
 
-/* portfolio section */
+/*--------------------PORTFOLIO--------------------*/
 
 .works-list {
     display: flex;
@@ -284,6 +290,7 @@ nav a {
     margin-bottom: 30px;
     
     background: #FFFFFF;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .works-list img {
@@ -361,13 +368,13 @@ nav a {
     transform: translateY(0);
 }
 
-/* hide logical header */
+/*--------------------HIDE LOGICAL HEADER--------------------*/
 
 .hide-heading {
     display: none;
 }
 
-/* page nav */
+/*--------------------PAGE NAV--------------------*/
 .page-nav {
     display: flex;
 }
@@ -391,7 +398,7 @@ nav a {
     line-height: 1.14;
     letter-spacing: 0.02em;
 
-    transition: 250ms var(--cubic-bezier);
+    transition: color 250ms var(--cubic-bezier);
 }
 
 .contact-flex {
@@ -411,6 +418,7 @@ nav a {
 
 .contact-nav a {
     display: flex;
+    align-items: center;
     color: var(--secondary-text-color);
     text-decoration: none;
     font-weight: 500;
@@ -418,7 +426,7 @@ nav a {
     line-height: 1.14;
     letter-spacing: 0.02em;
 
-    transition: 250ms var(--cubic-bezier);
+    transition: color 250ms var(--cubic-bezier);
 }
 
 .contact-nav li {
@@ -468,25 +476,25 @@ nav a {
     --color4: currentColor;
 }
 
-/* hero */
+/*--------------------HERO--------------------*/
 
 .hero {
     /* put text-align: center; into parent and all descendants will inherit centrical alignment */
-    text-align: center;
-}
-
-.container-fluid {
-    height: 600px;
+    
+    padding-top: 200px;
+    padding-bottom: 200px;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+
+    text-align: center;
 
     background-color: var(--hero-bg-color);
 
     background-image: linear-gradient(
         to right,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
         ),
         url(../images/hero-bg.jpg);
 
@@ -495,16 +503,24 @@ nav a {
     background-size: cover;
 }
 
+.container-fluid {
+    
+}
+
 .hero .hero-title {
-    color: var(--white-text-color);
+
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    padding-top: 200px;
-    margin-bottom: 30px;
+    color: var(--white-text-color);
 }
 
 .hero-button {
@@ -603,7 +619,9 @@ nav a {
 
     cursor: pointer;
     
-    transition: 250ms var(--cubic-bezier);
+    transition: color 250ms var(--cubic-bezier),
+                background-color 250ms var(--cubic-bezier),
+                box-shadow 250ms var(--cubic-bezier);
 }
 .button:hover,
 .button:focus {
@@ -624,7 +642,7 @@ nav a {
 
 .customers a {
     color: #AFB1B8;
-    transition: 250ms var(--cubic-bezier);
+    transition: color 250ms var(--cubic-bezier);
 }
 
 .customers a:hover,
@@ -644,7 +662,7 @@ nav a {
     border-radius: 4px;
     background-color: var(--white-text-color);
     
-    transition: 250ms var(--cubic-bezier);
+    transition: border-color 250ms var(--cubic-bezier);
 }
 
 .card-customer:hover,
@@ -737,7 +755,7 @@ nav a {
     height: 44px;
     width: 44px;
     
-    transition: 250ms var(--cubic-bezier);
+    transition: background-color 250ms var(--cubic-bezier);
 }
 
 .social-bg:hover,
