@@ -286,7 +286,8 @@ nav a {
     margin-bottom: 30px;
     
     background: #FFFFFF;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: box-shadow 250ms var(--cubic-bezier);
+    
 }
 
 .works-list img {
@@ -359,9 +360,15 @@ nav a {
 
 }
 
+.work:hover,
+.work:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .work:hover .work-dscr,
 .work:focus .work-dscr {
     transform: translateY(0);
+    
 }
 
 /*--------------------HIDE LOGICAL HEADER--------------------*/
@@ -714,7 +721,7 @@ nav a {
     letter-spacing: 0.03em;
 }
 
-.contact {
+.contact-nav .footer-contact {
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     text-decoration: none;
